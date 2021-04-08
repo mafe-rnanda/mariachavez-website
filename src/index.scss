@@ -4,12 +4,12 @@
 
 * {
   box-sizing: border-box;
-  background-color: $black;
-  color: $white;
 }
 
 body {
   margin: 0;
   font-family: $font-family;
   @include font-size(24px);
+  background-color: $black;
+  color: $white;
 }
