@@ -1,0 +1,17 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.menu-section {
+  background-color: $black;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+.open-menu {
+  transform: translateX(0);
+}
+.closed-menu {
+  transform: translateX(-100%);
+}
