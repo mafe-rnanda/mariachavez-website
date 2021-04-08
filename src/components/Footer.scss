@@ -1,0 +1,28 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.footer {
+  @include flex-row;
+  margin: $spacing;
+  justify-content: space-between;
+  p {
+    margin: 5px 10px;
+    @include font-size(20px);
+  }
+  .footer-links {
+    @include flex-column;
+    margin: $spacing;
+  }
+  .pages {
+    @include flex-row;
+    p:hover {
+      color: $light-green;
+    }
+  }
+  .social {
+    @extend .pages;
+    p:hover {
+      color: $light-pink;
+    }
+  }
+}
