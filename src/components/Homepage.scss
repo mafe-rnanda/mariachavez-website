@@ -1,0 +1,44 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.hello-intro {
+  width: 80vw;
+  margin: auto;
+}
+
+.greeting-hello {
+  color: $light-yellow;
+  margin-top: 10vw;
+}
+
+.greeting-name {
+  color: $light-pink;
+  text-align: right;
+}
+
+.introduction {
+  width: 50%;
+  float: right;
+  text-align: right;
+  margin-bottom: $spacing;
+}
+
+.projects-summary {
+  @include flex-column;
+  justify-content: space-evenly;
+  clear: both;
+  background-color: $white;
+  color: $black;
+  padding: 0 10vw;
+  height: 50vw;
+}
+
+.projects-heading {
+  @include flex-row;
+}
+.projects-grid {
+  @include flex-row;
+  img {
+    height: 12vw;
+  }
+}
