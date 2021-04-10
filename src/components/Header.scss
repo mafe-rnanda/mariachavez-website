@@ -15,9 +15,14 @@
   cursor: pointer;
   z-index: 1001;
   transition: background 0.3s ease;
+  margin: 2vw 7vw 0 0;
   .opened-menu {
     color: $black;
     background-color: $white;
+  }
+  &:hover {
+    background-color: $white;
+    color: $black;
   }
 }
 
