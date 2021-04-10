@@ -2,16 +2,15 @@
 @import "../styles/variables.scss";
 
 .footer {
+  width: 80vw;
+  margin: 2vw auto;
   @include flex-row;
-  margin: $spacing;
-  justify-content: space-between;
   p {
     margin: 5px 10px;
     @include font-size(20px);
   }
   .footer-links {
     @include flex-column;
-    margin: $spacing;
   }
   .pages {
     @include flex-row;
@@ -21,6 +20,7 @@
   }
   .social {
     @extend .pages;
+    justify-content: center;
     p:hover {
       color: $light-pink;
     }
