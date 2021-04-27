@@ -1,6 +1,12 @@
+import "./About.scss";
+
 export default function About(props) {
   return (
     <div>
+      <div>
+        <p>About</p>
+        <h1>MARIA CHAVEZ</h1>
+      </div>
       <div>
         <div>
           Yolo ipsum dolor sit amet, consectetur adipiscing elit. Ut ac suscipit
