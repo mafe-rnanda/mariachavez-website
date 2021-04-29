@@ -14,7 +14,13 @@
   }
   .pages {
     @include flex-row;
-    p:hover {
+    a{
+      text-decoration: none;
+      color: $white;
+    }
+    
+    
+    a:hover {
       color: $light-green;
     }
   }
