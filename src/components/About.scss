@@ -1,0 +1,28 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+
+.about-content {
+    @include flex-column;
+    align-items: flex-start;
+    width: 80vw;
+    margin: 5vw auto;
+  }
+
+.about-text-content{
+    @include flex-row;
+    width: 80vw;
+    margin: 10vh auto;
+}
+
+.about-description{
+    a {
+        color: $white;
+        text-decoration: none;
+        font-weight: 700;
+        &:hover {
+          color: $light-yellow;
+          text-decoration: underline;
+        }
+      }
+}

@@ -3,16 +3,19 @@ import "./About.scss";
 export default function About(props) {
   return (
     <div>
-      <div>
+      <div className="page-header-texts">
         <p>About</p>
-        <h1>MARIA CHAVEZ</h1>
+        <h1>
+          <a href="/">MARIA CHAVEZ</a>
+        </h1>
       </div>
-      <div>
-        <div>
+      <div className="about-content">
+      <div className="about-text-content">
+        <div className="about-intro">
           Yolo ipsum dolor sit amet, consectetur adipiscing elit. Ut ac suscipit
           leo. Carpe diem vulputate est nec commodo rutrum.
         </div>
-        <div>
+        <div className="about-description">
           <div>
             Yolo ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
             suscipit leo. Carpe diem vulputate est nec commodo rutrum.
@@ -20,13 +23,17 @@ export default function About(props) {
             swear jar’s full. Ut rhoncus velit at mauris interdum, fringilla
             dictum neque rutrum. Curabitur mattis odio at erat viverra lobortis.
           </div>
-          <div>Have a look at my resume</div>
+          <div><a target="_blank" href="https://www.canva.com/design/DAEXG-Os3IM/Qj-PZkwcaEq1LzqG8YrMdg/view?utm_content=DAEXG-Os3IM&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton">Have a look at my resume</a></div>
         </div>
       </div>
       <div>Reach out and touch base</div>
       <div>
-        HAVE A PROJECT?<br></br>LET'S TALK ABOUT IT
+        <p>HAVE A PROJECT?</p><p>LET'S TALK ABOUT IT</p>
       </div>
+
+      </div>
+      
+      
     </div>
   );
 }
