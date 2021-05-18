@@ -7,13 +7,15 @@
 }
 
 .greeting-hello {
-  color: $light-yellow;
+  // color: $light-yellow;
   margin-top: 10vw;
+  @include font-size(3.5em);
 }
 
 .greeting-name {
-  color: $light-pink;
+  // color: $light-pink;
   text-align: right;
+  @include font-size(3.5em);
 }
 
 .introduction {
@@ -21,6 +23,31 @@
   float: right;
   text-align: right;
   margin-bottom: $spacing;
+}
+
+.remove-greeting {
+  display: none;
+}
+.contact-link {
+  color: $white;
+  &:hover {
+    text-decoration: none;
+    color: $light-pink;
+    font-weight: 600;
+  }
+}
+
+.about-link {
+  @extend .contact-link;
+  &:hover {
+    color: $light-green;
+  }
+}
+.work-link {
+  @extend .contact-link;
+  &:hover {
+    color: $light-yellow;
+  }
 }
 
 .projects-summary {
@@ -35,6 +62,10 @@
 
 .projects-heading {
   @include flex-row;
+  a {
+    @include font-size(18px);
+    color: $black;
+  }
 }
 .projects-grid {
   @include flex-row;
