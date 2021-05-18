@@ -4,18 +4,48 @@ import React, { useState } from "react";
 import "./Homepage.scss";
 
 export default function Homepage() {
-  const [hovered, setHovered] = useState(false);
-  const toggleHover = () => setHovered(!hovered);
+  const [workHovered, setWorkHovered] = useState(false);
+  const toggleWorkHover = () => setWorkHovered(!workHovered);
+
+  const [aboutHovered, setAboutHovered] = useState(false);
+  const toggleAboutHover = () => setAboutHovered(!aboutHovered);
+
+  const [contactHovered, setContactHovered] = useState(false);
+  const toggleContactHover = () => setContactHovered(!contactHovered);
+
+  const hovered = () => {
+    if (
+      workHovered === true ||
+      aboutHovered === true ||
+      contactHovered === true
+    ) {
+      return false;
+    } else {
+      return true;
+    }
+  };
 
   return (
     <div>
       <div className="hello-intro">
-        <h1 className={hovered ? "remove-greeting" : "greeting-hello"}>
-          HI, HELLO.
-          <br></br>
-          HOW ARE YOU?
-        </h1>
-        <h1 className={hovered ? "greeting-hello" : "remove-greeting"}>WORK</h1>
+        <div className="top-hover">
+          <h1 className={hovered() ? "greeting-hello" : "remove-greeting"}>
+            HI, HELLO.
+            <br></br>
+            HOW ARE YOU?
+          </h1>
+          <h1 className={workHovered ? "greeting-work" : "remove-greeting"}>
+            WORK
+          </h1>
+          <h1 className={aboutHovered ? "greeting-about" : "remove-greeting"}>
+            ABOUT
+          </h1>
+          <h1
+            className={contactHovered ? "greeting-contact" : "remove-greeting"}
+          >
+            CONTACT
+          </h1>
+        </div>
         <h1 className="greeting-name">
           MY NAME IS <br></br> MARIA CHAVEZ.
         </h1>
@@ -27,18 +57,28 @@ export default function Homepage() {
           <a
             href="/work"
             className="work-link"
-            onMouseEnter={toggleHover}
-            onMouseLeave={toggleHover}
+            onMouseEnter={toggleWorkHover}
+            onMouseLeave={toggleWorkHover}
           >
             Here
           </a>{" "}
           are some of my projects and over{" "}
-          <a href="/about" className="about-link">
-            there
+          <a
+            href="/about"
+            className="about-link"
+            onMouseEnter={toggleAboutHover}
+            onMouseLeave={toggleAboutHover}
+          >
+            here
           </a>{" "}
           a bit about myself. <br></br>If you would like to talk and discuss a
           specific project, please{" "}
-          <a href="/contact" className="contact-link">
+          <a
+            href="/contact"
+            className="contact-link"
+            onMouseEnter={toggleContactHover}
+            onMouseLeave={toggleContactHover}
+          >
             send me a message
           </a>{" "}
           💌

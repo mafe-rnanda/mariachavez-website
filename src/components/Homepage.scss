@@ -12,6 +12,23 @@
   @include font-size(3.5em);
 }
 
+.greeting-work {
+  @extend .greeting-hello;
+  color: $light-yellow;
+}
+.greeting-about {
+  @extend .greeting-hello;
+  color: $light-green;
+}
+.greeting-contact {
+  @extend .greeting-hello;
+  color: $light-pink;
+}
+
+.top-hover {
+  height: 15vw;
+}
+
 .greeting-name {
   // color: $light-pink;
   text-align: right;
