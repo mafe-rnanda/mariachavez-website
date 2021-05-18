@@ -12,6 +12,27 @@ import Contact from "./components/Contact";
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
 
+  const [workHovered, setWorkHovered] = useState(false);
+  const toggleWorkHover = () => setWorkHovered(!workHovered);
+
+  const [aboutHovered, setAboutHovered] = useState(false);
+  const toggleAboutHover = () => setAboutHovered(!aboutHovered);
+
+  const [contactHovered, setContactHovered] = useState(false);
+  const toggleContactHover = () => setContactHovered(!contactHovered);
+
+  const hovered = () => {
+    if (
+      workHovered === true ||
+      aboutHovered === true ||
+      contactHovered === true
+    ) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   return (
     <div className="App">
       <Router>
@@ -20,7 +41,15 @@ function App() {
           <Menu openMenu={openMenu} setOpenMenu={setOpenMenu} />
         </header>
         <Route exact path="/">
-          <Homepage />
+          <Homepage
+            hovered={hovered()}
+            workHovered={workHovered}
+            aboutHovered={aboutHovered}
+            contactHovered={contactHovered}
+            toggleWorkHover={toggleWorkHover}
+            toggleAboutHover={toggleAboutHover}
+            toggleContactHover={toggleContactHover}
+          />
         </Route>
         <Route path="/work">
           <Work />

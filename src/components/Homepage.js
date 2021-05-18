@@ -3,45 +3,53 @@
 import React, { useState } from "react";
 import "./Homepage.scss";
 
-export default function Homepage() {
-  const [workHovered, setWorkHovered] = useState(false);
-  const toggleWorkHover = () => setWorkHovered(!workHovered);
+export default function Homepage(props) {
+  // const [workHovered, setWorkHovered] = useState(false);
+  // const toggleWorkHover = () => setWorkHovered(!workHovered);
 
-  const [aboutHovered, setAboutHovered] = useState(false);
-  const toggleAboutHover = () => setAboutHovered(!aboutHovered);
+  // const [aboutHovered, setAboutHovered] = useState(false);
+  // const toggleAboutHover = () => setAboutHovered(!aboutHovered);
 
-  const [contactHovered, setContactHovered] = useState(false);
-  const toggleContactHover = () => setContactHovered(!contactHovered);
+  // const [contactHovered, setContactHovered] = useState(false);
+  // const toggleContactHover = () => setContactHovered(!contactHovered);
 
-  const hovered = () => {
-    if (
-      workHovered === true ||
-      aboutHovered === true ||
-      contactHovered === true
-    ) {
-      return false;
-    } else {
-      return true;
-    }
-  };
+  // const hovered = () => {
+  //   if (
+  //     workHovered === true ||
+  //     aboutHovered === true ||
+  //     contactHovered === true
+  //   ) {
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
+  // };
 
   return (
     <div>
       <div className="hello-intro">
         <div className="top-hover">
-          <h1 className={hovered() ? "greeting-hello" : "remove-greeting"}>
+          <h1 className={props.hovered ? "greeting-hello" : "remove-greeting"}>
             HI, HELLO.
             <br></br>
             HOW ARE YOU?
           </h1>
-          <h1 className={workHovered ? "greeting-work" : "remove-greeting"}>
+          <h1
+            className={props.workHovered ? "greeting-work" : "remove-greeting"}
+          >
             WORK
           </h1>
-          <h1 className={aboutHovered ? "greeting-about" : "remove-greeting"}>
+          <h1
+            className={
+              props.aboutHovered ? "greeting-about" : "remove-greeting"
+            }
+          >
             ABOUT
           </h1>
           <h1
-            className={contactHovered ? "greeting-contact" : "remove-greeting"}
+            className={
+              props.contactHovered ? "greeting-contact" : "remove-greeting"
+            }
           >
             CONTACT
           </h1>
@@ -57,8 +65,8 @@ export default function Homepage() {
           <a
             href="/work"
             className="work-link"
-            onMouseEnter={toggleWorkHover}
-            onMouseLeave={toggleWorkHover}
+            onMouseEnter={props.toggleWorkHover}
+            onMouseLeave={props.toggleWorkHover}
           >
             Here
           </a>{" "}
@@ -66,8 +74,8 @@ export default function Homepage() {
           <a
             href="/about"
             className="about-link"
-            onMouseEnter={toggleAboutHover}
-            onMouseLeave={toggleAboutHover}
+            onMouseEnter={props.toggleAboutHover}
+            onMouseLeave={props.toggleAboutHover}
           >
             here
           </a>{" "}
@@ -76,8 +84,8 @@ export default function Homepage() {
           <a
             href="/contact"
             className="contact-link"
-            onMouseEnter={toggleContactHover}
-            onMouseLeave={toggleContactHover}
+            onMouseEnter={props.toggleContactHover}
+            onMouseLeave={props.toggleContactHover}
           >
             send me a message
           </a>{" "}
