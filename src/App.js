@@ -1,40 +1,34 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React, { useState } from "react";
 // import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Menu from "./components/Menu";
-import Homepage from "./components/Homepage";
-import Work from "./components/Work";
+import Homepage from "./components/Landing_intro";
+import Work from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
 function App() {
-  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <div className="App">
-      <Router>
-        <header>
-          <Header openMenu={openMenu} setOpenMenu={setOpenMenu} />
-          <Menu openMenu={openMenu} setOpenMenu={setOpenMenu} />
-        </header>
-        <Route exact path="/">
+      {/* <Router> */}
+        <nav id="nav-bar">
+          <a>About</a>
+          <a>Projects</a>
+          <a>Contact</a>
+        </nav>
+        {/* <Route exact path="/"> */}
           <Homepage />
-        </Route>
-        <Route path="/work">
-          <Work />
-        </Route>
-        <Route path="/about">
+        {/* </Route> */}
+        {/* <Route path="/about"> */}
           <About />
-        </Route>
-        <Route path="/contact">
+        {/* </Route> */}
+        {/* <Route path="/work"> */}
+          <Work />
+        {/* </Route> */}
+        {/* <Route path="/contact"> */}
           <Contact />
-        </Route>
-      </Router>
-      <footer>
-        <Footer />
-      </footer>
+        {/* </Route> */}
+      {/* </Router> */}
     </div>
   );
 }
