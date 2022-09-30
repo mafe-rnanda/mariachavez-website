@@ -1,3 +1,65 @@
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
 
+#landing-section {
+  position: relative;
+}
+
+.intro-text {
+  font-family: $neue-light;
+  line-height: 50px;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.intro-header {
+  display: flex;
+  justify-content: flex-end;
+  h1 {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 25vh;
+    right: -30vh;
+    font-size: 8.5vh;
+    font-weight: normal;
+    letter-spacing: 3px;
+  }
+  h3 {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 39.5vh;
+    right: -15.5vh;
+    font-family: $neue-light;
+    font-size: 3vh;
+    letter-spacing: 5px;
+  }
+}
+
+.intro-portrait {
+  .rectangle {
+    background-color: $tart-orange;
+    width: 650px;
+    height: 320px;
+    position: absolute;
+    top: 180%;
+    right: 30%;
+  }
+  .placeholder-pic{
+    background-color: $coral;
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    top: 20vh;
+    left: 44vh;
+    z-index: 1;
+  }
+}
+
+.brief-description {
+  position: absolute;
+  top: 330%;
+  width: 25%;
+  left: 50%;
+  font-size: 25px;
+}

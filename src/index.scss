@@ -1,15 +1,46 @@
-@import "./styles/variables.scss";
-@import "./styles/mixins.scss";
+  @font-face {
+    font-family: 'mier_aregular';
+    src: url('fonts/miera-regular-webfont.woff2') format('woff2'),
+    url('fonts/miera-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'mier_abold';
+    src: url('fonts/miera-bold-webfont.woff2') format('woff2'),
+    url('fonts/miera-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'neue_machinalight';
+    src: url('fonts/neuemachina-light-webfont.woff2') format('woff2'),
+    url('fonts/neuemachina-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'neue_machinaregular';
+    src: url('fonts/neuemachina-regular-webfont.woff2') format('woff2'),
+    url('fonts/neuemachina-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @import "./styles/variables.scss";
+  @import "./styles/mixins.scss";
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  @include font-size(24px);
+  margin: 0 18vh;
+  font-family: 'mier_aregular';
+  font-size:30px;
   background-color: $main-beige;
-  color: $almost-black;
+  color: $black;
 }
 
 // NAVIGATION BAR
@@ -17,8 +48,13 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 10vh 10vh;
+  margin: 10vh 0;
+  font-size: 25px;
   a {
-    padding: 0 5vh;
+    padding-left: 5vh;
+    &:hover {
+      text-decoration: underline;
+    }
   }
+  
 }
