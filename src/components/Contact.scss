@@ -1,2 +1,25 @@
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
+
+#contact-section {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  h1 {
+    grid-column: 4 / span 2;
+    text-align:center;
+  }
+  :nth-child(4){
+    grid-column: 2;
+  }
+  a{
+    text-decoration: underline;
+  }
+}
+
+.email-phone{
+  grid-column: 1 / span 2;
+  a{
+    text-decoration: none!important;
+  }
+}

@@ -5,18 +5,16 @@ export default function Contact(props) {
     <div id="contact-section">
       <h1>CONTACT</h1>
       <div>
-        <h4>INTERESTED IN WORKING TOGETHER?</h4>
+        <div>INTERESTED IN WORKING TOGETHER?</div>
         <a>Let's get in touch</a>
       </div>
-      <div>
-        <a>mf.chavezminjarez@gmail.com</a>
+      <div class="email-phone">
+        <a>mf.chavezminjarez@gmail.com</a><br/>
         <a>+1 (604) 836 3823</a>
       </div>
-      <div>
-        <a>GITHUB</a>
-        <a>LINKEDIN</a>
-        <a>MY RESUME</a>
-      </div>
+      <a>GITHUB</a>
+      <a>LINKEDIN</a>
+      <a>MY RESUME</a>
     </div>
   );
 }
