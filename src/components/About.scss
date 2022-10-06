@@ -1,28 +1,34 @@
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
 
-
-.about-content {
-    @include flex-column;
-    align-items: flex-start;
-    width: 80vw;
-    margin: 5vw auto;
+#about-section{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  h1 {
+    grid-column: span 3;
   }
-
-.about-text-content{
-    @include flex-row;
-    width: 80vw;
-    margin: 10vh auto;
+  :nth-child(2){
+    grid-column: 3/span 2;
+    grid-row: 2;
+  }
+  :nth-child(3){
+    grid-column: 1;
+  }
 }
 
-.about-description{
-    a {
-        color: $almost-black;
-        text-decoration: none;
-        font-weight: 700;
-        &:hover {
-          color: $light-yellow;
-          text-decoration: underline;
-        }
-      }
+
+.rectangle {
+  background-color: $tart-orange;
+  width: 300px;
+  height: 200px;
+  grid-column: 3/span 3;
+  grid-row: 2;
+}
+.placeholder-pic{
+  background-color: $coral;
+  width: 200px;
+  height: 320px;
+  grid-column: 3/span 2;
+  grid-row: 2;
 }
