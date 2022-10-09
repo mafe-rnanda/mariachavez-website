@@ -2,46 +2,67 @@
 @import "../styles/variables.scss";
 
 #landing-section {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(5,1fr);
 }
 
 .intro-text {
   font-family: $neue-light;
   line-height:2.5rem;
+  font-size: 2rem;
+  grid-column: 1/4;
   a {
     text-decoration: underline;
   }
 }
 
 .intro-header {
-  h1 {
-    // transform: rotate(90deg);
-    font-size: 7rem;
-    font-weight: normal;
-    letter-spacing: 3px;
-  }
-  h3 {
-    // transform: rotate(-90deg);
-    position: absolute;
-    font-family: $neue-light;
-    letter-spacing: .5rem;
-  }
+  grid-column: 5;
+  grid-row: 1/span 2;
+}
+.name {
+  font-size: 7rem;
+  font-weight: normal;
+  letter-spacing: 3px;
+  writing-mode: vertical-rl;
+  margin-top: 2em;
+}
+.job {
+  font-family: $neue-light;
+  letter-spacing: .5rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 2em;
+  padding-top: 0.4em;
 }
 
 .intro-portrait {
+  grid-row: 2/3;
+}
   .rectangle {
     background-color: $tart-orange;
-    width: 300px;
-    height: 200px;
+    height: 25em;
+    grid-column: 2/5;
+    width: 50em;
+    justify-self: center;
+    align-self: end;
   }
   .placeholder-pic{
     background-color: $coral;
-    width: 200px;
-    height: 320px;
-    // z-index: 1;
+    width: 40em;
+    height: 40em;
+    grid-column: 3/4;
+    place-self: center;
+    position: relative;
+    bottom: 3em;
   }
-}
+
 
 .brief-description {
-  width: 25%;
+  grid-column: 2/4;
   text-align: right;
+  grid-row: 3;
+  width: 25em;
+  justify-self: end;
 }
