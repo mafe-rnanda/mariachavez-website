@@ -3,7 +3,7 @@ import "./Contact.scss";
 export default function Contact(props) {
   return (
     <div id="contact-section">
-      <h1>CONTACT</h1>
+      <h1 class="header">CONTACT</h1>
       <div>
         <div>INTERESTED IN WORKING TOGETHER?</div>
         <a>Let's get in touch</a>

@@ -5,6 +5,7 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
+  font-size: 2rem;
   h1 {
     grid-column: 4 / span 2;
     text-align:center;
@@ -14,6 +15,8 @@
   }
   a{
     text-decoration: underline;
+    text-align: center;
+    color:$black;
   }
 }
 
