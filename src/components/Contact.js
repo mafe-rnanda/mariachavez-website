@@ -10,7 +10,7 @@ export default function Contact(props) {
       </div>
       <div class="email-phone">
         <a href="mailto:mf.chavezminjarez@gmail.com">mf.chavezminjarez@gmail.com</a><br/>
-        <a>+1 (604) 836 3823</a>
+        <a href="tel:6048363823">+1 (604) 836 3823</a>
       </div>
       <a href="https://github.com/mafe-rnanda" target="_blank">GITHUB</a>
       <a href="http://www.linkedin.com/in/mariachavezm" target="_blank">LINKEDIN</a>
