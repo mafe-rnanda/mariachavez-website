@@ -3,19 +3,11 @@ import "./Landing_intro.scss";
 export default function Homepage() {
   return (
     <div id="landing-section">
-      <p class="intro-text">Hello!<br/>
+      <p>Hello!<br/>
         My name is Maria Chavez. <br/>
         I am a full-stack web developer based in Canada. <br/>
         More <a href="#about-section">about me</a>.</p>
-      <div class="intro-portrait placeholder-pic"></div>
-      <div class="intro-portrait rectangle"></div>
-      {/* <div class="intro-portrait">
-      </div> */}
-      {/* <div class="intro-header"> */}
-      {/* </div> */}
-      <h1 class="intro-header name">MARIA CHAVEZ</h1>
-      <h3 class="intro-header job">Full Stack Web Developer</h3>
-      <p class="introduction brief-description">I seek to create efficient, aesthetically appealing and easy to navigate websites while also provide high-quality solutions.</p>
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
     </div>
   );
 }

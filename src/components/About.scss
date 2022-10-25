@@ -5,42 +5,62 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
-  h1 {
+  .header {
     grid-column: span 3;
-  }
-  :nth-child(2){
-    grid-column: 3/span 2;
-    grid-row: 2/3;
-    width: 20em;
-    left:2em;
-    bottom: 2em;
-  }
-  :nth-child(3){
-    grid-column: 1/3;
-    grid-row: 2/4;
-    width: 22em;
   }
 }
 
-.highlight-summary {
+.sub-header-name { 
+  grid-column: 5; 
+  grid-row: 2/5; 
+  font-size: 7rem;
+  font-weight: normal;
+  letter-spacing: 3px;
+  writing-mode: vertical-rl;
+  margin-top: 2em;
+}
+
+.sub-header-job {
+  grid-column: 5;
+  grid-row: 2/5; 
+  font-family: $neue-light;
+  letter-spacing: .5rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 2em;
+  padding-top: 0.4em;
+}
+
+
+.rectangle {
+  background-color: $orange-apricot;
+  height: 25em;
+  grid-column: 2/5;
+  grid-row: 3;
+  width: 50em;
+  justify-self: center;
+  align-self: end;
+}
+.placeholder-pic{
+  width: 40em;
+  grid-column: 2/5;
+  grid-row: 3;
+  place-self: center;
   position: relative;
+  // bottom: 3em;
+}
+
+.about-highlight {
+  grid-column: 2/4;
+  grid-row: 2;
+  // position: relative;
   font-size: 2rem;
   text-transform: uppercase;
 }
 
-.about-picture-background {
-  background-color: $tart-orange;
-  width: 75em;
-  height: 20em;
-  grid-column: 3/6;
-  grid-row: 3;
-  justify-self: center;
-}
-.about-picture{
-  background-color: $coral;
-  width: 55em;
-  height: 35em;
-  grid-column: 3/6;
-  grid-row: 2/4;
-  place-self: center;
+.about-summary {
+  grid-column: 2/5;
+  grid-row: 4;
+  justify-self: end;
+  font-size: 1.5rem;
 }
