@@ -14,6 +14,12 @@ export default function About(props) {
       <div className="about-highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
       
       <p class="about-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+      {/* <div className="grid skills">
+        <h1 class="header">MY SKILLS</h1>
+        <div>Javascript, HTML/CSS, SQL, Ruby, Python</div>
+        <div>Spoken Languages: English, Spanish, French</div>
+      </div> */}
     </div>
   );
 }

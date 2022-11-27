@@ -34,21 +34,10 @@ export default function Work(props) {
         <img src={more} className="showMore" onClick={helpBookSlideShow} />
         <div className="divider"></div>
         <img name="slide" className="slideShow" />
-        {/* <a>more details
-          <img src={arrow} />
-        </a> */}
+        <p>HelpBook is a SPA (Single Page Application) which provides a platform for people and organizations to request help and users to provide it. On HelpBook donors can make a donation securely and easily and the receivers will have a profile to ask for the help they need, that will be easily accessable to donors. <br /><br/>The App utilizes React built-in and hooks and allows users (donors) to donate and follow users in real time. The app also allow users (receivers) to seamlessly edit, add or remove wishlist items or money goals with a user friendly pattern. Data is persisted by the API server using a PostgreSQL database. The client application communicates with an API server over HTTP with axios library, using the JSON format.</p>
       </div>
 
-      <div class="project-container">
-        <div class="number">02</div>
-        <div class="project-name">PROJECT NAME</div>
-        <img src={more} className="showMore" />
-        <div className="divider"></div>
-        {/* <a>more details
-          <img src={arrow} />
-        </a> */}
-      </div>  
-
+      
       </div>
     </div>
   );
