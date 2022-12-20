@@ -7,6 +7,11 @@
   grid-template-columns: repeat(5, 1fr);
   .header {
     grid-column: span 3;
+    // margin-bottom:1em;
+  }
+  .my-skills {
+    grid-column: 2/5;
+    justify-self: center;
   }
 }
 
@@ -56,6 +61,7 @@
   // position: relative;
   font-size: 2rem;
   text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .about-summary {
@@ -63,4 +69,71 @@
   grid-row: 4;
   justify-self: end;
   font-size: 1.5rem;
+}
+
+// SKILLS SECTION
+.sub-header-skills{
+  font-family: $neue-light;
+  font-size: 2em;
+  grid-column: 1/span 3;
+  grid-row: 6;
+  justify-self: center;
+  margin-top: 0;
+}
+
+.sub-header-spoken-languages{
+  font-size: 2em;
+  font-family: $neue-light;
+  grid-column: 4/span 2;
+  grid-row: 6;
+  justify-self: center;
+  margin-top: 0;
+}
+.sub-header-other-skills{
+  font-size: 2em;
+  font-family: $neue-light;
+  grid-column: 2/span 3;
+  margin-top:2em;
+  // grid-row: 6;
+  justify-self: center;
+}
+
+.skill{
+  grid-column: 1;
+  justify-self: right;
+  font-size:2.3em;
+  margin: .2em 0;
+}
+
+.skill-level{
+  grid-column: 2/span 2;
+  align-self: center;
+  margin: 0 3em;
+}
+
+.other-skills{
+    grid-column: 2/span 3;
+    margin-top: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+.MuiLinearProgress-root.MuiLinearProgress-colorPrimary.MuiLinearProgress-determinate.css-eglki6-MuiLinearProgress-root {
+  height: 1.5em;
+  background-color: transparent;
+  border: 1px solid $black;
+}
+
+.MuiLinearProgress-bar.MuiLinearProgress-barColorPrimary.MuiLinearProgress-bar1Determinate.css-5xe99f-MuiLinearProgress-bar1 {
+  background-color: $coral;
+}
+
+.spoken-languages{
+  grid-column: 4/span 2;
+  justify-self: center;
+  grid-row: 7/span 4;
+  font-size:2.3em;
+  line-height: 2em;
+  margin-top: 0;
 }
