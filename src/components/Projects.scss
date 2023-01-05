@@ -54,11 +54,18 @@
       margin: auto;
     }
   }
-  .slideShow{
-    width: 40em;
-    grid-column: 1/3;
-    justify-self: center;
-    padding: 3em 0;
+}
+  
+.react-slideshow-container {
+  width: 30em;
+  justify-self: center;
+  padding: 3em 0;
+  img {
+    width: 20em;
   }
 }
-   
+
+.project-description{
+  grid-column: 2/5;
+  padding: 5em 5em 0 5em;
+}
